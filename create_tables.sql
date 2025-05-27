@@ -22,7 +22,7 @@ CREATE TABLE Roles
 CREATE TABLE Menu(
 	ItemsID int PRIMARY KEY IDENTITY(1,1),
 	Name varchar(50) NOT NULL,
-	Price DECIMAL(10,2) NOT NULL,
+	Price DECIMAL(10,2) NOT NULL,--10 digits integers n 2 decimal digits--
 	IsAvailable BIT default 1, --1 means yes,0 means no--
 	);
 
