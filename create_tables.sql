@@ -10,18 +10,20 @@ CREATE TABLE Users
 	UserName varchar(50) NOT NULL,
 	Password VARCHAR(20) NOT NULL UNIQUE,
 	RoleID int NOT NULL,
-	FOREIGN KEY (RoleID) References Roles(RoleID)
+	FOREIGN KEY (RoleID) References Roles(RoleID),
 );
 
 CREATE TABLE Roles
 (
 	RoleId int PRIMARY KEY IDENTITY(1,1),
 	RoleName varchar NOT NULL,
-)
-CREATE TABLE Menu(
+);
 
-	Items
-	
+CREATE TABLE Menu(
+	ItemsID int PRIMARY KEY IDENTITY(1,1),
+	Name varchar(50) NOT NULL,
+	Price DECIMAL(10,2) NOT NULL,
+	IsAvailable BIT default 1,
 	);
 
 
