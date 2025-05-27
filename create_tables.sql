@@ -4,15 +4,16 @@ GO
 USE SedapMakanDB;
 GO
 	
-CREATE TABLE Userdata
+CREATE TABLE Users
 (
-	userID int PRIMARY KEY,
-    userName varchar(50) NOT NULL,
-	userPassword VARCHAR(20) NOT NULL,
-    userRole varchar(50) NOT NULL
+	UserID int PRIMARY KEY IDENTITY(1,1),
+	UserName varchar(50) NOT NULL,
+	Password VARCHAR(20) NOT NULL UNIQUE,
+	RoleID int NOT NULL,
+	FOREIGN KEY (RoleID) References Roles(RoleID)
 );
 
-CREATE TABLE RoleName
+CREATE TABLE Roles
 (
 	RoleId int PRIMARY KEY,
 	RoleName varchar NOT NULL
