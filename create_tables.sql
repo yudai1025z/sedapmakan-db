@@ -9,4 +9,8 @@ CREATE TABLE Users
 
 create database menudata;
 
-CREATE TABLE Menu
+CREATE TABLE Menu(
+
+	Items
+	
+	);
