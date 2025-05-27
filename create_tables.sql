@@ -1,4 +1,5 @@
-create database userdata;
+CREATE DATABASE SedapMakanDB;
+GO
 
 CREATE TABLE Users 
 (
