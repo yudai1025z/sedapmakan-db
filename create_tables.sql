@@ -6,7 +6,8 @@ GO
 	
 CREATE TABLE Userdata
 (
-    userName varchar(50) PRIMARY KEY,
+	userID int PRIMARY KEY,
+    userName varchar(50) NOT NULL,
 	userPassword VARCHAR(20) NOT NULL,
     userRole varchar(50) NOT NULL
 );
