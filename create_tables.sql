@@ -5,19 +5,19 @@ USE SedapMakanDB;
 GO
 	
 CREATE TABLE Users
-(
+	(
 	UserID int PRIMARY KEY IDENTITY(1,1),
 	UserName varchar(50) NOT NULL,
 	Password VARCHAR(20) NOT NULL UNIQUE,
 	RoleID int NOT NULL,
 	FOREIGN KEY (RoleID) References Roles(RoleID),
-);
+	);
 
 CREATE TABLE Roles
-(
+	(
 	RoleId int PRIMARY KEY IDENTITY(1,1),
 	RoleName varchar NOT NULL,
-);
+	);
 
 CREATE TABLE Menu(
 	ItemsID int PRIMARY KEY IDENTITY(1,1),
@@ -26,7 +26,22 @@ CREATE TABLE Menu(
 	IsAvailable BIT default 1, --1 means yes,0 means no--
 	);
 
-CREATE
+CREATE TABLE Orders(
+	OrderID int PRIMARY KEY IDENTITY(1,1),
+	UserID int NOT NULL,
+	OrderDate datetime default GETDATE(),
+	Status varchar(20) default 'pendiing',
+	FOREIGN KEY (UserID) References Users(UserID),
+	);
+
+CREATE TABLE OrderItems(
+	OrderItemID int PRIMARY KEY IDENTITY(1,1),
+	OrderID int NOT NULL,
+	ItemsID int NOT NULL,
+	Quantity  int NOT NULL,
+	FOREIGN KEY (OrderID) References Orders(OrderID),
+	FOREIGN KEY (ItemsID) References Menu(ItemsID),
+	);
 
 
 CREATE TABLE Refunds(
