@@ -1,16 +1,16 @@
 To Do list
 
 User data
-(UserName, Password, Role)
+({P}UserName, Password, Role)
 
 Menu data
-(Items, Price, Items number)
+(Items, Price, {P}Items number)
 
 Order data
-(Items, Quantity, price, Date, Total, Order Number)
+({F}Items, Quantity, {F}price, Date, Total, {P}Order Number)
 
 e-wallet data
-(UserName, balance)
+({F}UserName, balance)
 
 Feedback data
-(Username, Message, Rating) 
+(Username, Message,{P} Rating) 
