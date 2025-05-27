@@ -1,13 +1,17 @@
 To Do list
 
 User data
-({P}UserID,UserName, Password, Role)
+({P}UserID,UserName, Password, RoleID,Balance)
+
+Role data
+({P}RoleID,RoleName)
+
 
 Menu data
-(Items, Price, {P}ItemsID)
+({P}ItemsID,Name,Price,Isavailable,)
 
 Order data
-({F}Items, Quantity, {F}price, Date, Total, {P}OrderID)
+({P}OrderID,{F}Items, Quantity, {F}price, Date, Total)
 
 e-wallet data
 ({F}UserID, balance, Top up Amount, Date)
