@@ -15,8 +15,8 @@ CREATE TABLE Users
 
 CREATE TABLE Roles
 (
-	RoleId int PRIMARY KEY,
-	RoleName varchar NOT NULL
+	RoleId int PRIMARY KEY IDENTITY(1,1),
+	RoleName varchar NOT NULL,
 )
 CREATE TABLE Menu(
 
