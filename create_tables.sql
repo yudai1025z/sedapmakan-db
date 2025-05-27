@@ -3,9 +3,10 @@ GO
 
 USE SedapMakanDB;
 GO
-CREATE TABLE Users 
+	
+CREATE TABLE Userdata
 (
-    userName varchar(50) NOT NULL PRIMARY KEY,
+    userName varchar(50) PRIMARY KEY,
 	userPassword VARCHAR(20) NOT NULL,
     userRole varchar(50) NOT NULL
 );
