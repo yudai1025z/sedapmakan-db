@@ -12,6 +12,11 @@ CREATE TABLE Userdata
     userRole varchar(50) NOT NULL
 );
 
+CREATE TABLE ROLE
+(
+	RoleId int PRIMARY KEY,
+	Role varchar NOT NULL
+)
 CREATE TABLE Menu(
 
 	Items
