@@ -2,9 +2,9 @@ create database userdata;
 
 CREATE TABLE Users 
 (
-    userName varchar(15) NOT NULL PRIMARY KEY,
-	userPassword VARCHAR(255),
-    userRole varchar(255)
+    userName varchar(50) NOT NULL PRIMARY KEY,
+	userPassword VARCHAR(20),
+    userRole varchar(50)
 );
 
-yuyuyuy
+
