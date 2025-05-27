@@ -59,6 +59,8 @@ CREATE TABLE Feedbacks(
 	Response text,
 	SentDate datetime default GETDATE(),
 	FOREIGN KEY (UserID) References Users(UserID),
+	);
+
 CREATE TABLE Refunds(
 	RefundID int PRIMARY KEY IDENTITY(1,1),
 	OrderID int NOT NULL,
