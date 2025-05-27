@@ -4,13 +4,13 @@ User data
 ({P}UserID,UserName, Password, Role)
 
 Menu data
-(Items, Price, {P}Items number)
+(Items, Price, {P}ItemsID)
 
 Order data
-({F}Items, Quantity, {F}price, Date, Total, {P}Order Number)
+({F}Items, Quantity, {F}price, Date, Total, {P}OrderID)
 
 e-wallet data
-({F}UserName, balance, Top up Amount, Date)
+({F}UserID, balance, Top up Amount, Date)
 
 Feedback data
-(Username, Message,{P} Rating) 
+(UserID, Message,{P} Rating) 
