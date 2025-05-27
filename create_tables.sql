@@ -22,3 +22,14 @@ CREATE TABLE Menu(
 	Items
 	
 	);
+
+
+
+CREATE TABLE Refunds(
+	RefundID int PRIMARY KEY IDENTITY(1,1),
+	OrderID int NOT NULL,
+	Reason text,
+	Status varchar(20) default "Pending",
+	RequestedDate datetime default GETDATE(),
+	FOREIGN KEY (OrderID) references Orders(OrderID)
+	);
