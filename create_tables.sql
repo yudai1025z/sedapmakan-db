@@ -7,4 +7,6 @@ CREATE TABLE Users
     userRole varchar(50)
 );
 
+create database menudata;
 
+CREATE TABLE Menu
