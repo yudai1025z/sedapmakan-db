@@ -12,8 +12,14 @@ Menu data
 Order data
 ({P}OrderID,{F}UserID,OrderDate,Status)
 
-e-wallet data
-({F}UserID, balance, Top up Amount, Date)
+OrderItems data
+({P}OrderItemID,{F}OrderID,{F}ItemsID,Quantity)
+
+E-walletTransactions data
+({P}TransactionID,{F}UserID,Type,Amount,TransactionDate)
 
 Feedback data
-(UserID, Message,{P} Rating) 
+({P}FeedbackID,{F}UserID,Message,Responce,SentDate)
+
+Refunds data
+({P}RefundID,{F}OrderID,Reason,Status,RequestedDate)
