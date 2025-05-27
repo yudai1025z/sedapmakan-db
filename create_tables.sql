@@ -52,7 +52,13 @@ CREATE TABLE E-walletTransactions(
 	FOREIGN KEY (UserID) References Users(UserID),
 	);
 
-
+CREATE TABLE Feedbacks(
+	FeedbackID int PRIMARY KEY IDENTITY(1,1),
+	UserID int NOT NULL,
+	Message text NOT NULL,
+	Response text,
+	SentDate datetime default GETDATE(),
+	FOREIGN KEY (UserID) References Users(UserID),
 CREATE TABLE Refunds(
 	RefundID int PRIMARY KEY IDENTITY(1,1),
 	OrderID int NOT NULL,
