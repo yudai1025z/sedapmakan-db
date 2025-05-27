@@ -43,6 +43,15 @@ CREATE TABLE OrderItems(
 	FOREIGN KEY (ItemsID) References Menu(ItemsID),
 	);
 
+CREATE TABLE E-walletTransactions(
+	TransactionID int PRIMARY KEY IDENTITY(1,1),
+	UserID int NOT NULL,
+	Type varchar(20) NOT NULL, --TopUp or Payment or Refund"
+	Amount decimal(10,2) NOT NULL,
+	TransactionDate datetime default GETDATE(),
+	FOREIGN KEY (UserID) References Users(UserID),
+	);
+
 
 CREATE TABLE Refunds(
 	RefundID int PRIMARY KEY IDENTITY(1,1),
