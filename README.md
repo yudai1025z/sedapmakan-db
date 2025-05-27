@@ -10,7 +10,7 @@ Order data
 ({F}Items, Quantity, {F}price, Date, Total, {P}Order Number)
 
 e-wallet data
-({F}UserName, balance)
+({F}UserName, balance, )
 
 Feedback data
 (Username, Message,{P} Rating) 
