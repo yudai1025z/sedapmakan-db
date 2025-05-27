@@ -3,7 +3,12 @@ GO
 
 USE SedapMakanDB;
 GO
-	
+CREATE TABLE Roles
+	(
+	RoleId int PRIMARY KEY IDENTITY(1,1),
+	RoleName varchar(20) NOT NULL,
+	);
+
 CREATE TABLE Users
 	(
 	UserID int PRIMARY KEY IDENTITY(1,1),
@@ -11,12 +16,6 @@ CREATE TABLE Users
 	Password VARCHAR(20) NOT NULL UNIQUE,
 	RoleID int NOT NULL,
 	FOREIGN KEY (RoleID) References Roles(RoleID),
-	);
-
-CREATE TABLE Roles
-	(
-	RoleId int PRIMARY KEY IDENTITY(1,1),
-	RoleName varchar NOT NULL,
 	);
 
 CREATE TABLE Menu(
@@ -43,7 +42,7 @@ CREATE TABLE OrderItems(
 	FOREIGN KEY (ItemsID) References Menu(ItemsID),
 	);
 
-CREATE TABLE E-walletTransactions(
+CREATE TABLE EwalletTransactions(
 	TransactionID int PRIMARY KEY IDENTITY(1,1),
 	UserID int NOT NULL,
 	Type varchar(20) NOT NULL, --TopUp or Payment or Refund"
@@ -65,7 +64,7 @@ CREATE TABLE Refunds(
 	RefundID int PRIMARY KEY IDENTITY(1,1),
 	OrderID int NOT NULL,
 	Reason text,
-	Status varchar(20) default "Pending",
+	Status varchar(20) default 'Pending',
 	RequestedDate datetime default GETDATE(),
 	FOREIGN KEY (OrderID) references Orders(OrderID)
 	);
