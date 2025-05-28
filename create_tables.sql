@@ -13,7 +13,8 @@ CREATE TABLE Users
 	(
 	UserID int PRIMARY KEY IDENTITY(1,1),
 	UserName varchar(50) NOT NULL,
-	Password VARCHAR(20) NOT NULL UNIQUE,
+	Password VARCHAR(20) NOT NULL,
+	Balance Decimal(10,2) NOT NULL,
 	RoleID int NOT NULL,
 	FOREIGN KEY (RoleID) References Roles(RoleID)
 	);
