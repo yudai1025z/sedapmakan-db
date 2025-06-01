@@ -19,14 +19,16 @@ CREATE TABLE Users
 	FOREIGN KEY (RoleID) References Roles(RoleID)
 	);
 
-CREATE TABLE Menu(
+CREATE TABLE Menu
+	(
 	ItemsID int PRIMARY KEY IDENTITY(1,1),
 	Name varchar(50) NOT NULL,
 	Price DECIMAL(10,2) NOT NULL,--10 digits integers n 2 digits decimal--
 	IsAvailable BIT default 1 --1 means yes,0 means no--
 	);
 
-CREATE TABLE Orders(
+CREATE TABLE Orders
+	(
 	OrderID int PRIMARY KEY IDENTITY(1,1),
 	UserID int NOT NULL,
 	OrderDate datetime default GETDATE(),
